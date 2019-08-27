@@ -1,0 +1,9 @@
+<div class="title">
+  <div class="display">
+    <app-time-display [inputData]="present"></app-time-display>
+    <!--timedisplay 자식 컴포넌트에게 데이터 전달-->
+
+    <app-buttons (clickEvent)="startTime($event)"></app-buttons>
+  </div>
+
+  </div>
