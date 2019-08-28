@@ -1,0 +1,14 @@
+<div class="title">
+  <div class="display">
+    <app-time-display [inputData]="present"></app-time-display>
+    <!--timedisplay 자식 컴포넌트에게 데이터 전달-->
+
+    <app-buttons (clickEvent)="controlTime($event)"></app-buttons>
+
+    {{commandText}}
+    <app-buttons (clickEvent)="commandText = $event"></app-buttons>
+  </div>
+
+  <a [routerLink]="'/clock'">시계로 이동</a> <!-- 슬래시를 안써주면 기존 주소뒤에 붙음 -->
+
+</div>

@@ -11,10 +11,11 @@ export class ButtonsComponent implements OnInit {
 
   constructor() { }
 
- start(){
-    this.clickEvent.emit(10); //부모컴포넌트(section)에게 클릭이벤트 + 파라미터 10 전달
+  executeButton(command){
+    this.clickEvent.emit(command); //부모컴포넌트(section)에게 클릭이벤트 + 파라미터 command 전달
    // section의 app-buttons태그의 클릭이벤트가 실행된다 + $event로 파라미터받을 수 있음
  }
+
   ngOnInit() {
   }
 

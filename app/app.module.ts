@@ -7,22 +7,24 @@ import {HelloComponent} from "./hello/hello.component";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SectionComponent } from './section/section.component';
-import { TimeDisplayComponent } from './section/time-display/time-display.component';
-import { ButtonsComponent } from './section/buttons/buttons.component';
+import { TimeDisplayComponent } from './section/stopwatch/time-display/time-display.component';
+import { ButtonsComponent } from './section/stopwatch/buttons/buttons.component';
+import {LayoutModule} from "./layout/layout.module";
+import {SectionModule} from "./section/section.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    HeaderComponent,
-    FooterComponent,
-    SectionComponent,
-    TimeDisplayComponent,
-    ButtonsComponent
+    HelloComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    SectionModule
+  ],
+  exports: [
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
